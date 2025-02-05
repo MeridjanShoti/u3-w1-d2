@@ -20,8 +20,8 @@ function App() {
         <MyBookshop />
         <label htmlFor="genre">Select Genre</label>
         <select name="genre" id="genre" className="mx-2" onChange={genreChange}>
-          {genres.map((genre) => (
-            <option value={genre.toLowerCase()} key={`genre-${genre.toLowerCase}`}>
+          {genres.map((genre, index) => (
+            <option value={genre.toLowerCase()} key={`genre-${genre.toLowerCase + index}`}>
               {genre}
             </option>
           ))}
